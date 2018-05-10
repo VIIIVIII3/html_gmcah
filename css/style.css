@@ -1,0 +1,12 @@
+@charset "UTF-8";
+img{-webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s; -ms-transition: all 0.5s;  transition: all 0.5s;
+  border:0;display: inline-block;
+}
+a{color:#333;-webkit-transition: all .2s;-moz-transition: all .2s; -ms-transition: all .2s;transition: all .2s;}
+
+body{font-size: 14px;
+    background-size: cover;
+    -ms-behavior: url(./backgroundsize.min.htc);
+    behavior: url(./backgroundsize.min.htc);
+}

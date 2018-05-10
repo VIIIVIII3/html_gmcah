@@ -1,0 +1,235 @@
+@import './style.css';
+@import './base.less';
+@import './mixin.less';
+@subWidth: 1200px;
+@ipadWidth: 1024px;
+@mobileWidth: 1024px;
+
+body{
+	background: #ffffff;
+}
+.guide-section{
+	width: 100%;
+	height: 100%;
+	.guide-skip{
+		position: fixed;
+		top:40px;
+		width: 100%;
+		height: 64px;
+		line-height: 64px;
+		z-index: 10;
+		.logo{
+			float: left;
+			margin-left: 60px;
+			img{
+				vertical-align: middle;
+				cursor: pointer;
+			}
+		}
+		.skip-button{
+			float: right;
+			margin-right: 60px;
+			font-size: 18px;
+			color: #999999;
+			width: 126px;
+			height: 46px;
+			line-height: 46px;
+			background: #ffffff;
+			border-radius: 23px;
+			text-align: center;
+			letter-spacing: 2px;
+			cursor: pointer;
+		}
+	}
+	.dot-ab{
+		position: absolute;
+		width: 634px;
+		height: 634px;
+		top: 50%;
+		left: 50%;
+		margin: -317px 0 0 -317px;
+		z-index: 10;
+		.dot-re{
+			position: relative;
+			width: 100%;
+			height: 100%;
+			.dot{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				text-align: center;
+				opacity: 0;
+				visibility: visible;
+				&:before{
+					content: '';
+					width: 30px;
+					height: 30px;
+					position: absolute;
+					top: 0;
+					left: 50%;
+					margin: -15px 0 0 -15px;
+					border-radius: 50%;
+					background: #ffffff;
+					display: inline-block;
+				}
+				&:after{
+					content: '';
+					width: 46px;
+					height: 46px;
+					position: absolute;
+					top: 0;
+					left: 50%;
+					margin: -25px 0 0 -25px;
+					border-radius: 50%;
+					border: 2px solid #ffffff;
+					display: inline-block;
+				}
+				&:nth-child(1){
+					.rotate-2d(0deg);
+					.animation(dotShow,2.5s,ease,0s)
+				}
+				&:nth-child(2){
+					.rotate-2d(45deg);
+					.animation(dotShow,2.5s,ease,3s)
+				}
+				&:nth-child(3){
+					.rotate-2d(90deg);
+					.animation(dotShow,2.5s,ease,5.5s)
+				}
+				&:nth-child(4){
+					.rotate-2d(135deg);
+					.animation(dotShow,2.5s,ease,8s)
+				}
+				&:nth-child(5){
+					.rotate-2d(180deg);
+					.animation(dotShow,2.5s,ease,10.5s)
+				}
+				&:nth-child(6){
+					.rotate-2d(225deg);
+					.animation(dotShow,2.5s,ease,13s)
+				}
+				&:nth-child(7){
+					.rotate-2d(270deg);
+					.animation(dotShow,2.5s,ease,15.5s)
+				}
+				&:nth-child(8){
+					.rotate-2d(315deg);
+					.animation(dotShow,2.5s,ease,18s)
+				}
+			}
+		}
+	}
+	@keyframes dotShow{
+		0%   {opacity: 1}
+		25%  {opacity: 0.5}
+		50%  {opacity: 1}
+		100% {opacity: 0.5}
+	}
+	.year-box{
+		position: absolute;
+		top:50%;
+		left: 50%;
+		margin: -76px 0 0 -137px;
+		z-index: 10;
+		height: 152px;
+		width: 274px;
+		overflow: hidden;
+		span{
+			font-size: 137px;
+			color: #ffffff;
+			font-family: 'Times New Roman','arial';
+			line-height: 152px;
+			text-align: center;
+			display: inline-block;
+			width: 25%;
+			float: left;
+		}
+		#year-pre{
+			height: 100%;
+
+		}
+		#year-next{
+			height: 100%;
+		}
+	}
+	#canvas{
+		position: absolute;
+		z-index: 8;
+	}
+	#canvasRipple{
+		position: absolute;
+		z-index: 7;
+	}
+	.img-box{
+		position: absolute;
+		max-height: 949px;
+		overflow: hidden;
+		z-index: 1;
+        width: 100%;
+        height: 100%;
+		img{
+			.scale(1.2);
+			.usr-select();
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            top:0;
+          &:nth-child(1){
+            opacity: 1;
+            z-index: 1;
+            .transDelay(2.5s,ease-in,0s);
+          }
+          &:nth-child(2){
+            z-index: 2;
+            .transDelay(2.5s,ease-in,2.5s);
+          }
+          &:nth-child(3){
+            z-index: 3;
+            .transDelay(2.5s,ease-in,5s);
+          }
+          &:nth-child(4){
+            z-index: 4;
+            .transDelay(2.5s,ease-in,7.5s);
+          }
+          &:nth-child(5){
+            z-index: 5;
+            .transDelay(2.5s,ease-in,10s);
+          }
+          &:nth-child(6){
+            z-index: 6;
+            .transDelay(2.5s,ease-in,12.5s);
+          }
+          &:nth-child(7){
+            z-index: 7;
+            .transDelay(2.5s,ease-in,15s);
+          }
+          &:nth-child(8){
+            z-index: 8;
+            .transDelay(2.5s,ease-in,17.5s);
+          }
+		}
+        &.active{
+          img{
+            visibility: visible;
+            opacity: 1;
+            .scale(1);
+          }
+        }
+	}
+}
+
+@media screen and (max-width: @subWidth){
+
+}
+
+@media screen and (max-width: @ipadWidth){
+
+}
+
+@media (min-width: @mobileWidth) and (max-width: @ipadWidth){
+
+}
+
+@media screen and (max-width: @mobileWidth){
+
+}

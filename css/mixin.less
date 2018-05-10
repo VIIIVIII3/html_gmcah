@@ -1,0 +1,133 @@
+.trans(@s){
+	transition: all @s;
+	-webkit-transition: all @s;
+	-moz-transition: all @s;
+	-ms-transition: all @s;
+}
+.transDelay(@s,@e,@d){
+	transition: all @s @e @d;
+	-webkit-transition: all @s @e @d;
+	-moz-transition: all @s @e @d;
+	-ms-transition: all @s @e @d;
+}
+.transform-center(){
+	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+}
+.transform-top-center(){
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+}
+.transform-left-center(){
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+}
+.scale(@num){
+	transform: scale(@num);
+	-webkit-transform: scale(@num);
+	-moz-transform: scale(@num);
+	-ms-transform: scale(@num);
+}
+.scale-center(@num){
+	transform: translate(-50%,-50%) scale(@num);
+	-webkit-transform: translate(-50%,-50%) scale(@num);
+	-moz-transform: translate(-50%,-50%) scale(@num);
+	-ms-transform: translate(-50%,-50%) scale(@num);
+}
+.rotate-2d(@deg){
+	transform: rotate(@deg);
+	-webkit-transform: rotate(@deg);
+	-moz-transform: rotate(@deg);
+	-ms-transform: rotate(@deg);
+}
+.rotate-center(@deg){
+	transform: translate(-50%,-50%) rotateY(@deg);
+	-webkit-transform: translate(-50%,-50%) rotateY(@deg);
+	-moz-transform: translate(-50%,-50%) rotateY(@deg);
+	-ms-transform: translate(-50%,-50%) rotateY(@deg);
+}
+.bg-center-cover(){
+	background-position: center center;
+	-webkit-background-position: center center;
+	-moz-background-position: center center;
+	-ms-background-position: center center;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+}
+.bg-top-center-cover(){
+	background-position: top center;
+	-webkit-background-position: top center;
+	-moz-background-position: top center;
+	-ms-background-position: top center;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+}
+.box-sizing(){
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+}
+.ellipsis(){
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.lines-ell1(){
+	-webkit-line-clamp: 1;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	line-height:1.5;
+	height:1.5em;
+}
+.lines-ell2(){
+	-webkit-line-clamp: 2;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	line-height:1.5;
+	height:3em;
+}
+.lines-ell3(){
+	-webkit-line-clamp: 3;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	line-height:1.5;
+	height:4.5em;
+}
+.lines-ell4(){
+	-webkit-line-clamp: 4;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	line-height:1.5;
+	height:6em;
+}
+.usr-select(){
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+}
+.animation(@n,@s,@e,@d){
+	animation: @n @s @e @d;
+	-moz-animation: @n @s @e @d;	/* Firefox */
+	-webkit-animation: @n @s @e @d;	/* Safari 和 Chrome */
+	-o-animation: @n @s @e @d;	/* Opera */
+}
